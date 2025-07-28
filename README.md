@@ -8,7 +8,6 @@
 
 ## A Web Developer focused on learn the better web & mobile development technologies
 - 🌱 I’m currently learning ReactJS, NextJS and TypeScript
-- 💞️ I’m looking to collaborate on @EvolvesRio
 
 <div>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=lucasbpereira&show_icons=true&theme=algolia" />
