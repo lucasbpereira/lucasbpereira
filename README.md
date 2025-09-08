@@ -7,7 +7,7 @@
 </a>
 
 ## A Web Developer focused on learn the better web & mobile development technologies
-- 🌱 I’m currently learning ReactJS, NextJS and TypeScript
+- 🌱 I’m currently learning GoLang
 
 <div>
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=lucasbpereira&show_icons=true&theme=algolia" />
@@ -27,10 +27,17 @@
   <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
   
-  #### JavaScript / Frameworks
+  #### Main Stack
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Angular-FFFFFF?style=for-the-badge&logo=angular&logoColor=D5002F" alt="Angular" />
   <img src="https://img.shields.io/badge/Springboot-43853D?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot" />
   <img src="https://img.shields.io/badge/sqlserver-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
+
+  #### Side Stack
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-66dbfb?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/GoLang-6ed8e5?style=for-the-badge&logo=golang&logoColor=black" alt="GoLang" />
+  <img src="https://img.shields.io/badge/PostgreSQL-396c94?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgresql" />
 </div>
