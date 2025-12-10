@@ -47,12 +47,14 @@ header {
       color: #fff;
       position: relative;
       top: -50px;
+      // opacity: 0;
     }
 
     .box-text {
       width: 70%;
       position: relative;
       left: -50px;
+      // opacity: 0;
 
       p {
         position: relative;
@@ -64,6 +66,7 @@ header {
     .box-image {
       position: relative;
       bottom: -50px;
+      // opacity: 0;
       img {
         max-width: 200px;
         height: auto;
