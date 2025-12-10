@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Outfit:wght@100..900&display=swap');
+/* CSS Reset Simplificado - Foco em problemas comuns */
+
+/* 1. Remover todas as margens, paddings e bordas */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Reset de elementos HTML5 */
+html {
+  font-size: 62.5%; /* 1rem = 10px para facilitar cálculos */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* 3. Elementos de mídia */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 4. Fontes em elementos de formulário */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 5. Evitar overflow de texto */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* 6. Remover estilos padrão de lista */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 7. Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Botões */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+/* 9. Remover animações para reduzidas */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

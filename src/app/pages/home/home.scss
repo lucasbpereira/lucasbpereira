@@ -1,0 +1,124 @@
+header {
+  height: 100dvh;
+  width: 100dvw;
+  position: relative;
+  z-index: 5;
+  pointer-events: none; // Importante para não bloquear o scroll se o header for fixo transparente
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  nav {
+    position: fixed;
+    width: 100dvw;
+    // height: 90px;
+    z-index: 20; // Z-index maior que tudo
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+
+    .header-logo {
+      color: #000; // Ou a cor que você quer que fique no final
+      opacity: 0;  // COMEÇA INVISÍVEL (O GSAP vai mostrar depois)
+      transform: scale(1); // Garante tamanho inicial
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 4rem;
+
+    }
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0 3rem;
+    position: relative;
+
+    h2.title {
+      color: #fff;
+      position: relative;
+      top: -50px;
+    }
+
+    .box-text {
+      width: 70%;
+      position: relative;
+      left: -50px;
+
+      p {
+        position: relative;
+        left: -50px;
+        color: #fff
+      }
+    }
+
+    .box-image {
+      position: relative;
+      bottom: -50px;
+      img {
+        max-width: 200px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.logo-box {
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .mask-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #000;
+    mix-blend-mode: multiply;
+
+    .logo {
+      color: #fff;
+      font-size: 4rem;
+      font-weight: 900;
+
+      transform-origin: center center;
+      will-change: transform;
+      white-space: nowrap;
+    }
+  }
+}
+
+section {
+  height: 100dvh;
+  width: 100dvw;
+  position: relative;
+  z-index: 15; // Garante que a próxima seção cubra o efeito ao rolar
+}
