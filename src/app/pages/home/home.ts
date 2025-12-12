@@ -24,7 +24,7 @@ export class Home implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrambleTextPlugin);
+    gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
     this.timeline = gsap.timeline({
       scrollTrigger: {
