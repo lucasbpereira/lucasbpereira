@@ -1,27 +1,32 @@
-<div class="logo-box" #logoPrincipal>
-  <img src="./assets/img/bg-riodejaneiro.jpg" alt="Imagem do Rio de Janeiro">
-  <div class="mask-overlay">
-    <h1 class="logo">{{logo}}</h1>
-  </div>
-</div>
-
 <header class="fixed-header">
   <nav>
     <h1 class="header-logo">{{logo}}</h1>
-  </nav>
 
-  <div class="container">
-    <div class="box-text">
-      <h2 class="title">
-        Olá mundo! Meu nome é Lucas Barbosa Pereira. E minha jornada no mundo do código começou com um hotel virtual.
-      </h2>
-      <p class="subtitle">Tudo começou aos 14 anos, não com uma linha de "Hello, World!", mas com um hotel. Um Habbo Hotel, para ser exato. Sem grana para os créditos do jogo, minha curiosidade de adolescente me levou a um desafio: "E se eu criasse meu próprio servidor?". Foi ali, fuçando em comunidades, editando códigos que eu mal entendia e vendo a mágica acontecer, que a semente da programação foi plantada. Aquela vontade de criar e resolver problemas nunca mais me abandonou.</p>
-    </div>
-    <div class="box-image">
-      <img src="./assets/img/hotel.png" alt="Image de um Hotel Virtual, chamado Habbo Hotel">
+    <app-menu></app-menu>
+  </nav>
+</header>
+<div class="logo-box" #logoPrincipal>
+  <img src="./assets/img/lucasbarbosapereira.png" alt="Imagem do Rio de Janeiro">
+  <div class="mask-overlay">
+    <h1 class="logo">{{logo}}</h1>
+
+    <div class="container">
+      <div class="box-text">
+        <div class="title">
+          <h2>Olá mundo! Meu nome é</h2>
+          <h1 class="myName">Lucas Barbosa Pereira</h1>
+          <h2>E minha jornada no mundo do código começou com um hotel virtual.</h2>
+        </div>
+        <p class="subtitle">Tudo começou aos 14 anos, não com uma linha de "Hello, World!", mas com um hotel. Um Habbo Hotel, para ser exato. Sem grana para os créditos do jogo, minha curiosidade de adolescente me levou a um desafio: "E se eu criasse meu próprio servidor?". Foi ali, fuçando em comunidades, editando códigos que eu mal entendia e vendo a mágica acontecer, que a semente da programação foi plantada. Aquela vontade de criar e resolver problemas nunca mais me abandonou.</p>
+      </div>
+      <div class="box-image">
+        <img src="./assets/img/hotel.png" alt="Image de um Hotel Virtual, chamado Habbo Hotel">
+      </div>
     </div>
   </div>
-</header>
+</div>
+
+
 
 <section #about>
   sobre

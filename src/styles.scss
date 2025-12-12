@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Outfit:wght@100..900&display=swap');
 /* CSS Reset Simplificado - Foco em problemas comuns */
 
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-overlay-bg: #000000;
+  --color-overlay-text: #ffffff;
+  --color-accent: #eab308; /* yellow-500 */
+  --color-accent-hover: #ca8a04; /* yellow-600 */
+  --color-dim: rgba(255, 255, 255, 0.3);
+
+  /* Cores específicas das redes sociais (opcional) */
+  --social-purple: #a855f7;
+  --social-cyan: #22d3ee;
+  --social-blue: #3b82f6;
+  --social-gray: #6b7280;
+}
+
 /* 1. Remover todas as margens, paddings e bordas */
 *,
 *::before,
