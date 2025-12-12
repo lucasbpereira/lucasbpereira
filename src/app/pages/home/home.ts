@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -11,12 +11,17 @@ import { Menu } from '../../components/menu/menu';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home implements AfterViewInit {
+export class Home implements AfterViewInit, OnInit {
   @ViewChild('logoPrincipal', { static: true }) logoPrincipal!: ElementRef;
 
   logo: string = '{lucasbpereira}'
   timeline!: gsap.core.Timeline;
   timelineHeader!: gsap.core.Timeline;
+  image: string = './assets/img/vert-lucasbarbosapereira.png';
+  
+  ngOnInit(): void {
+    this.selectImage()
+  }
 
   ngAfterViewInit() {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrambleTextPlugin);
@@ -76,5 +81,77 @@ export class Home implements AfterViewInit {
           { bottom: -50, opacity: 0 },
           { bottom: 0, opacity: 1, duration: 0.2 },
       "+=0.1");
+  }
+
+  selectImage() {
+    const path = "./assets/img/";
+    const extension = ".webp";
+    let layout = "hor";
+    let image = "-lucasbarbosapereira"
+
+    if(window.innerWidth > window.innerHeight) {
+      layout = "hor";
+    } else {
+      layout = "vert"
+    }
+
+    const today: Date = new Date();
+    const actualMonth: number = today.getMonth();
+    
+    console.log(today, actualMonth)
+
+    image = "-" + this.getActualImage(actualMonth)
+
+    this.image = path + layout + image + extension;
+  }
+
+  getActualImage(actualMonth: number): string {
+    let imageName: string = "lucasbarbosapereira"
+
+    switch (actualMonth) {
+      case 0:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 1:
+          imageName = "carnival";
+          break;
+      case 2:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 3:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 4:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 5:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 6:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 7:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 8:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 9:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 10:
+          imageName = "lucasbarbosapereira";
+          break;
+      case 11:
+          imageName = "christmas";
+          break;
+      default:
+          // Isso não deve acontecer, a menos que haja um erro na data.
+          imageName = "lucasbarbosapereira";
+
+    }
+    
+    return imageName
+
   }
 }
