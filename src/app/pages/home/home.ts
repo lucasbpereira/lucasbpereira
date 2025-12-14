@@ -7,17 +7,16 @@ import { Menu } from '../../components/menu/menu';
 
 @Component({
   selector: 'app-home',
-  imports: [Menu],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home implements AfterViewInit, OnInit {
-  @ViewChild('logoPrincipal', { static: true }) logoPrincipal!: ElementRef;
-
   logo: string = '{lucasbpereira}'
+
   timeline!: gsap.core.Timeline;
   timelineHeader!: gsap.core.Timeline;
-  image: string = './assets/img/vert-lucasbarbosapereira.png';
+  image: string = './assets/img/vert-lucasbpereira.png';
   
   ngOnInit(): void {
     this.selectImage()
@@ -87,7 +86,7 @@ export class Home implements AfterViewInit, OnInit {
     const path = "./assets/img/";
     const extension = ".webp";
     let layout = "hor";
-    let image = "-lucasbarbosapereira"
+    let image = "-lucasbpereira"
 
     if(window.innerWidth > window.innerHeight) {
       layout = "hor";
@@ -106,48 +105,48 @@ export class Home implements AfterViewInit, OnInit {
   }
 
   getActualImage(actualMonth: number): string {
-    let imageName: string = "lucasbarbosapereira"
+    let imageName: string = "lucasbpereira"
 
     switch (actualMonth) {
       case 0:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 1:
-          imageName = "carnival";
+          imageName = "lucasbpereira";
           break;
       case 2:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 3:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 4:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 5:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 6:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 7:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 8:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 9:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 10:
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
           break;
       case 11:
-          imageName = "christmas";
+          imageName = "lucasbpereira";
           break;
       default:
           // Isso não deve acontecer, a menos que haja um erro na data.
-          imageName = "lucasbarbosapereira";
+          imageName = "lucasbpereira";
 
     }
     

@@ -15,10 +15,6 @@ export class Menu implements AfterViewInit {
   ngAfterViewInit(): void {
     gsap.registerPlugin(SplitText); // Important for text animations
 
-    const hamburgerMenu = document.getElementById("hamburger-menu");
-
-    let isOpen = false; // Hamburger open state
-
     this.tl = gsap.timeline({ paused: true });
 
     this.tl.to("#top-line", { // Top line rotate and move down

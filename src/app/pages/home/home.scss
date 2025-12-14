@@ -1,42 +1,4 @@
-header {
-  width: 100dvw;
-  position: fixed;
-  z-index: 25;
-  pointer-events: none;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 
-  nav {
-    position: fixed;
-    width: 100dvw;
-    // height: 90px;
-    z-index: 20; // Z-index maior que tudo
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-    top: 0;
-    left: 0;
-
-    .header-logo {
-      color: #000; // Ou a cor que você quer que fique no final
-      // opacity: 0;  // COMEÇA INVISÍVEL (O GSAP vai mostrar depois)
-      transform: scale(1); // Garante tamanho inicial
-      text-align: center;
-    }
-
-    h1 {
-      color: #000;
-      font-size: 4rem;
-
-    }
-  }
-
-
-}
 
 .logo-box {
   width: 100dvw;
