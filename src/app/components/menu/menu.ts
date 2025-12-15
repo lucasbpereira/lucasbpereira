@@ -17,6 +17,8 @@ export class Menu implements AfterViewInit {
 
     this.tl = gsap.timeline({ paused: true });
 
+    this.tl.set("#links-section", { autoAlpha: 0 });
+
     this.tl.to("#top-line", { // Top line rotate and move down
         rotate: 45,
         y: 3.5,
@@ -34,11 +36,14 @@ export class Menu implements AfterViewInit {
         duration: 1,
         ease: "expo.out"
       }, "<")
-      .from("#links-section", { // Links slide in (right to left)
+      .fromTo("#links-section", { // Links slide in (right to left)
         x: 100,
-        autoAlpha: 0,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        autoAlpha: 1,
         duration: 1,
-        ease: "back.out", // "Bounce"
+        ease: "back.out",
       }, "<0.3"); // Starts 0.3 seconds after previous animation
 
 
