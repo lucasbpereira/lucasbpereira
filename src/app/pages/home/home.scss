@@ -88,7 +88,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: #000;
+    background: #000;  /* fallback for old browsers */
     mix-blend-mode: multiply;
 
     .logo {
@@ -101,56 +101,180 @@
       white-space: nowrap;
     }
 
-    .container {
+    // .carousel-container {
+    //   align-items: center;
+    //   justify-content: center;
+    //   gap: 3rem;
+    //   margin: 3rem;
+    //   position: relative;
+    //   margin-top: 20dvh;
+    //   flex-direction: row;
+    //   flex-wrap: nowrap;
+
+    //   h2 {
+    //     color: #fff;
+    //     position: relative;
+    //   }
+
+    //   h2.highlight {
+    //     font-size: 5.325rem;
+    //     line-height: 4rem;
+    //     text-transform: uppercase;
+    //     margin-bottom: 0;
+    //   }
+
+    //   h1 {
+    //     font-size: 5.325rem;
+    //     color: #fff;
+    //     line-height: 4rem;
+    //     text-transform: uppercase;
+    //     margin-bottom: 0;
+    //   }
+
+
+    //   .box-text {
+    //     width: 70%;
+    //     position: relative;
+
+    //     p {
+    //       position: relative;
+    //       color: #fff
+    //     }
+    //   }
+
+    //   .box-image {
+    //     position: relative;
+    //     width: 30%;
+    //     height: 259px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     text-align: center;
+    //     align-content: center;
+    //     flex-wrap: nowrap;
+    //     flex-direction: column;
+
+    //     img {
+    //       width: 200px;
+    //       height: auto;
+    //       position: relative;
+    //       top: auto;
+    //       left: auto;
+    //     }
+    //   }
+
+    // }
+
+    .carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 20dvh;
+    }
+
+    .carousel-track {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+
+      display: flex;
       align-items: center;
       justify-content: center;
       gap: 3rem;
-      margin: 3rem;
-      position: relative;
-      margin-top: 20dvh;
+      padding: 0 3rem;
+    }
 
-      h2 {
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+
+      button.nav-btn {
+        background: transparent;
+        border: 1px solid rgba(255,255,255, 0.3);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover:not(:disabled) {
+          background: rgba(255,255,255, 0.1);
+          border-color: #fff;
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .box-text {
+      width: 70%;
+      position: relative;
+
+      h2{
         color: #fff;
-        position: relative;
       }
 
       h2.highlight {
         font-size: 5.325rem;
-        line-height: 4rem;
+        line-height: 5.325rem;
         text-transform: uppercase;
-        margin-bottom: 0;
-      }
-
-      h1 {
-        font-size: 5.325rem;
         color: #fff;
-        line-height: 4rem;
-        text-transform: uppercase;
-        margin-bottom: 0;
+        min-height: 4rem;
       }
 
-
-      .box-text {
-        width: 70%;
+      p {
         position: relative;
-
-        p {
-          position: relative;
-          color: #fff
-        }
+        color: #fff
       }
+    }
 
-      .box-image {
-        position: relative;
-        width: 200px;
+    .box-image {
+       position: relative;
+        width: 30%;
         height: 259px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
 
         img {
           width: 200px;
           height: auto;
+          position: relative;
+          top: auto;
+          left: auto;
         }
-      }
+    }
 
+
+    .fog {
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      width: 100dvw;
+      height: 100px;
+      opacity: 0;
+      pointer-events: none;
+      background: #000000;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0));  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to top, #ffffff, rgba(0, 0, 0, 0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
   }
 }
@@ -160,4 +284,5 @@ section {
   width: 100dvw;
   position: relative;
   z-index: 15;
+  border-top: 1px solid white;
 }

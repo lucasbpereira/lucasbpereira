@@ -27,7 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
             ]
           },
           "configurations": {
@@ -81,7 +82,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
             ]
           }
         }
