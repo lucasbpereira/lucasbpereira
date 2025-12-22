@@ -1,0 +1,24 @@
+<section class="skill-section">
+  <div class="skill-drawer">
+    <canvas #networkCanvas id="network"></canvas>
+
+    <div class="seo-text">
+      <h2>Minhas Habilidades Técnicas</h2>
+      <ul>
+        <li>Frontend: HTML5, CSS3, SCSS, JavaScript, ReactJs</li>
+        <li>Backend: PHP, MySQL, WordPress, Laravel</li>
+        <li>Ferramentas: Git, GitHub, Figma</li>
+      </ul>
+    </div>
+  </div>
+  <aside>
+    <ul>
+      @for(skill of skillsData; track $index) {
+        <li>
+          {{ skill.efficience }}
+          <app-progress-bar [value]="skill.efficience" [barColor]="'#F0F'"></app-progress-bar>
+        </li>
+      }
+    </ul>
+  </aside>
+</section>

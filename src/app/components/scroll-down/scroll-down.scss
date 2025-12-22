@@ -1,0 +1,46 @@
+/* No seu componente .css ou .scss */
+.container_mouse {
+  text-align: center;
+  color: white; /* Garanta que a cor seja visível */
+}
+
+.mouse-btn {
+  margin: 10px auto;
+  width: 20px; /* Aumentei levemente para facilitar o respiro */
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+}
+
+.mouse-scroll {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: conic-gradient(from 45deg in oklch, #f3113b, #8a18f4, #fd3bc1, #f3113b);
+  border-radius: 50%;
+
+  /* Centralização absoluta */
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+
+  /* Adicione o prefixo se necessário, mas navegadores modernos leem assim: */
+  animation: scrolling 1.5s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(15px);
+  }
+}

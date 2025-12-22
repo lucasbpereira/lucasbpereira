@@ -68,10 +68,19 @@ export class Menu implements AfterViewInit {
 
     if (this.isOpen()) {
       this.tl.reverse(); // Plays animations in reverse when closing menu
+      document.querySelector('page-wrapper')?.classList.remove('active');
     } else {
       this.tl.play(0); // Plays animation
+      document.querySelector('page-wrapper')?.classList.add('active');
     }
 
     this.isOpen.update(isOpen => !isOpen);
+  }
+
+  scrollToAbout() {
+    console.log(window.pageYOffset, window.innerHeight);
+    window.scrollTo(0, (window.innerHeight * 2));
+    this.toggleMenu();
+    console.log(window.pageYOffset, window.innerHeight);
   }
 }

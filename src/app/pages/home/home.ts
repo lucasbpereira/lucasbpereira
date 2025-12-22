@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 import { NgxiIconoir, iconoirArrowLeft, iconoirArrowRight } from '@ngxi/iconoir';
+import { Skills } from '../skills/skills';
+import { ScrollDown } from '../../components/scroll-down/scroll-down';
 
 interface CarouselItem {
   preTitle: string;
@@ -16,13 +18,14 @@ interface CarouselItem {
 
 @Component({
   selector: 'app-home',
-  imports: [NgxiIconoir],
+  imports: [NgxiIconoir, Skills, ScrollDown],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home implements AfterViewInit, OnInit {
   logo: string = '{lucasbpereira}'
   birthDate = signal(new Date(1997, 5, 24));
+
   protected iconoirArrowRight = iconoirArrowRight;
   protected iconoirArrowLeft = iconoirArrowLeft;
   currentSlideIndex = signal(0);
@@ -155,6 +158,10 @@ export class Home implements AfterViewInit, OnInit {
           "<")
           .to(".fixed-header", {
               zIndex: 25,
+              duration: 0.2
+          }, "-=0.1")
+          .to(".scroll-down", {
+              opacity: 0,
               duration: 0.2
           }, "-=0.1")
           .to(".right-box", {
