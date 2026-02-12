@@ -28,8 +28,10 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@ngxi/iconoir": "^0.12.33",
     "@types/gsap": "^1.20.2",
     "gsap": "^3.14.1",
+    "iconoir": "^7.11.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
